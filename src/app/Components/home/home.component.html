@@ -3,19 +3,27 @@
   <div class="card-body">
     <h5 class="card-title">{{ primoPost.title }}</h5>
     <p class="card-text">{{ primoPost.body }}</p>
-    <a href="#" class="btn btn-primary">Vedi Dettagli</a>
+    <a [routerLink]="['/post-details', primoPost.id]" class="btn btn-primary"
+      >Vedi Dettagli</a
+    >
   </div>
 </div>
 
 <h2>Potrebbe Interessarti</h2>
 
-<ng-container *ngFor="let post of arrPosts">
-  <div class="col col-12 col-md-4">
-    <div class="card my-5">
-      <div class="card-body">
-        <h5 class="card-title">{{ post.title }}</h5>
-        <p class="card-text">{{ post.body }}</p>
-        <a href="#" class="btn btn-primary">Vedi Dettagli</a>
+<ng-container>
+  <div class="row row-cols-md-4">
+    <div class="col d-flex align-items-stretch" *ngFor="let post of arrPosts">
+      <div class="card my-5">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">{{ post.body }}</p>
+          <a
+            [routerLink]="['/post-details', post.id]"
+            class="btn btn-primary mt-auto"
+            >Vedi Dettagli</a
+          >
+        </div>
       </div>
     </div>
   </div>

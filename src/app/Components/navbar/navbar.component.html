@@ -1,6 +1,5 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Post</a>
     <button
       (click)="toggle()"
       class="navbar-toggler"
@@ -21,15 +20,15 @@
       }"
       id="navbarSupportedContent"
     >
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Active</a>
+          <a class="nav-link" routerLink="/active-posts">Active</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Inactive</a>
+          <a class="nav-link" routerLink="/inactive-posts">Inactive</a>
         </li>
       </ul>
     </div>

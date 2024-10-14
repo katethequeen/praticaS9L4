@@ -1,0 +1,12 @@
+<h2>Inactive Posts</h2>
+<div class="row row-cols-md-4">
+  <div class="col d-flex align-items-stretch" *ngFor="let post of arrPost">
+    <div class="card my-5 border border-2 border-danger">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <p class="card-text">{{ post.body }}</p>
+        <a routerLink="/" class="btn btn-primary mt-auto">Torna in Home</a>
+      </div>
+    </div>
+  </div>
+</div>

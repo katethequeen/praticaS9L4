@@ -1,0 +1,22 @@
+@if(post) {
+
+<h2>Card n° {{ post.id }} Details</h2>
+<div class="row">
+  <div class="col">
+    <div
+      class="card my-5"
+      [ngStyle]="{ border: post.active ? '1px solid green' : '1px solid red' }"
+    >
+      <div class="card-body">
+        <h5 class="card-title">Title: {{ post.title }}</h5>
+        <p class="card-text">Content: {{ post.body }}</p>
+        <h3>Tags</h3>
+        <div class="tags d-flex justify-content-center">
+          <p *ngFor="let tag of post.tags">#{{ tag }}</p>
+        </div>
+        <a routerLink="/" class="btn btn-primary">Torna in Home</a>
+      </div>
+    </div>
+  </div>
+</div>
+}
